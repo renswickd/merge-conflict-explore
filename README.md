@@ -1,7 +1,7 @@
 # merge-conflict-explore
 
 ## Repository Structure
-
+```
 merge-conflict-explore/
 │
 ├── README.md
@@ -56,3 +56,4 @@ merge-conflict-explore/
 │
 └── blog-outline/
     └── series-outline.md
+```
