@@ -46,8 +46,11 @@ You will:
 - Visualize Git as a graph
 
 ---
+## Hands-on
 
-## Step 0: Clean Start
+practice the below steps to understand how commit graph works.
+
+### Step 0: Clean Start
 
 ```bash
 git status
@@ -68,19 +71,19 @@ git branch feature-a
 git checkout feature-a
 ```
 
+### Step 3: Add Commit on feature-a
+```bash
+echo "Feature A change" >> demo/file.txt
+git add demo/file.txt
+git commit -m "Add feature A"
+```
+
 ### Step 4: Switch Back to main and Add Another Commit
 ```bash
 git checkout main
 echo "Main branch change" >> demo/file.txt
 git add demo/file.txt
 git commit -m "Main branch change"
-```
-
-### Step 3: Add Commit on feature-a
-```bash
-echo "Feature A change" >> demo/file.txt
-git add demo/file.txt
-git commit -m "Add feature A"
 ```
 
 ### Step 5: Visualize the Commit Graph
