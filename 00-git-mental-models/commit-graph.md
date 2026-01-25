@@ -52,4 +52,53 @@ You will:
 ```bash
 git status
 ```
+Ensure your working tree is clean.
 
+### Step 1: Create First Commit
+
+```bash
+echo "Line 1" >> demo/file.txt
+git add demo/file.txt
+git commit -m "Initial commit"
+```
+
+### Step 2: Create a Branch
+```bash
+git branch feature-a
+git checkout feature-a
+```
+
+### Step 4: Switch Back to main and Add Another Commit
+```bash
+git checkout main
+echo "Main branch change" >> demo/file.txt
+git add demo/file.txt
+git commit -m "Main branch change"
+```
+
+### Step 3: Add Commit on feature-a
+```bash
+echo "Feature A change" >> demo/file.txt
+git add demo/file.txt
+git commit -m "Add feature A"
+```
+
+### Step 5: Visualize the Commit Graph
+```bash
+git log --online --graph --all --decorate
+```
+
+
+## What to Observe
+
+- Each commit points to a parent
+- feature-a and main diverged from the same commit
+- Branches are just labels, not copies of code
+- HEAD points to your current branch
+
+## Key Takeaway
+
+If you understand the commit graph:
+
+- Merge conflicts stop feeling random
+- Rebase behaviour becomes predictable
