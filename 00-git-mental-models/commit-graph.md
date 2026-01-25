@@ -36,3 +36,20 @@ There is **no concept of “latest file”** — only snapshots.
 A branch is **not a copy of code**.  
 A branch is a **movable pointer to a commit**.
 
+---
+
+## Goal of This Exercise
+
+You will:
+- Create multiple branches
+- Generate diverging commit history
+- Visualize Git as a graph
+
+---
+
+## Step 0: Clean Start
+
+```bash
+git status
+```
+
