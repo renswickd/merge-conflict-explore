@@ -55,5 +55,7 @@ merge-conflict-explore/
 │   └── create-conflict.sh
 │
 └── blog-outline/
-    └── series-outline.md
+│   └── series-outline.md
+├── demo/
+│   ├── demo-files
 ```
