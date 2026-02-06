@@ -1,4 +1,5 @@
-# merge-conflict-explore
+# Why this Repo?
+A hands-on conflict lab sessions for intermediate developers to understand Git merges, rebases, and conflict resolution.
 
 ## Repository Structure
 ```
