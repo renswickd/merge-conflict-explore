@@ -1,4 +1,4 @@
-function calculateTotal(price, tax, discount) {
-  const subtotal = price + tax;
-  return subtotal - discount;
+export function calculateTotal(price, taxRate) {
+  const tax = price * taxRate;
+  return price + tax;
 }
