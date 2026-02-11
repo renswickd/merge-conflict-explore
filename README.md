@@ -1,5 +1,6 @@
 # Why this Repo?
 A hands-on conflict lab sessions for intermediate developers to understand Git merges, rebases, and conflict resolution.
+> This is NOT a beginner Git tutorial. It assumes you already know `clone`, `add`, `commit`, and `push`.
 
 ## Repository Structure
 ```
