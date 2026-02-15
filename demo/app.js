@@ -1,3 +1,4 @@
-function greet(userName) {
-  return "Hello ${userName}!";
+function greet(name) {
+  const message = "Hello " + name;
+  return message;
 }
