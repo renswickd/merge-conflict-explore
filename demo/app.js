@@ -1,4 +1,5 @@
-export function calculateTotal(price, taxRate) {
-  const tax = price * taxRate;
-  return price + tax;
+function greet(name) {
+  const message = "Hello " + name;
+  console.log("Greeting user");
+  return message;
 }
