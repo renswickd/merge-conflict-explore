@@ -48,3 +48,52 @@ You will:
 5. Learn how to recover safely
 
 ---
+
+# Step 1: Create Base File
+
+```bash
+git checkout main
+
+cat <<EOF > demo/app.js
+function greet(name) {
+  return "Hello " + name;
+}
+EOF
+
+git add demo/app.js
+git commit -m "Initial greet function"
+```
+
+# Step 2: Create Feature Branch with Multiple Commits
+```bash
+git checkout -b feature-enhancement
+```
+
+## Commit 1
+```bash
+cat <<EOF > demo/app.js
+function greet(name) {
+  const message = "Hello " + name;
+  return message;
+}
+EOF
+
+git add demo/app.js
+git commit -m "Refactor: introduce message variable"
+```
+
+## Commit 2
+```bash
+cat <<EOF > demo/app.js
+function greet(name) {
+  const message = "Hello " + name;
+  console.log("Greeting user");
+  return message;
+}
+EOF
+
+git add demo/app.js
+git commit -m "Add logging"
+```
+
+Now your feature branch has 2 commits.
