@@ -97,3 +97,38 @@ git commit -m "Add logging"
 ```
 
 Now your feature branch has 2 commits.
+
+# Step 3: Meanwhile, main Changes
+```base
+git checkout main
+```
+
+Simulate another developer modifying the same function:
+
+```bash
+cat <<EOF > demo/app.js
+function greet(userName) {
+  return `Hello ${userName}`;
+}
+EOF
+
+git add demo/app.js
+git commit -m "Refactor: use template string and rename parameter"
+```
+
+# Step 4: Visualize Before Rebase
+```bash
+git log --oneline --graph --all --decorate
+```
+
+You should see:
+
+- main has advanced.
+- feature-enhancement has two commits.
+- They diverged.
+
+# Step 5: Start the Rebase
+```bash
+git checkout feature-enhancement
+git rebase main
+```
