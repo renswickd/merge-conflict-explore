@@ -162,3 +162,45 @@ git rebase --continue
 Git now replays Commit 2.
 
 If that commit also conflicts, you must resolve it again.
+
+## Why This Feels Worse Than Merge
+
+### Merge:
+
+    - One conflict resolution step
+    - One merge commit
+
+### Rebase:
+
+    - Conflict per commit
+    - History rewritten
+    - More manual intervention
+
+## Observe the Final History
+After finishing:
+```bash
+git log --oneline --graph --all
+```
+
+Notice:
+
+- No merge commit
+- Feature commits now sit on top of main
+- History is linear
+
+# Abort Option (Very Important)
+If things go wrong:
+
+```bash
+git rebase --abort
+```
+
+This returns branch to original state.
+
+# Key Takeaways
+
+- Rebase replays commits one-by-one
+- Conflicts may repeat
+- History becomes linear
+- Rebasing shared branches is dangerous
+- Rebasing local feature branches is common
