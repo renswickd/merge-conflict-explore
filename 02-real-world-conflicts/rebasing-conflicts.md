@@ -132,3 +132,33 @@ You should see:
 git checkout feature-enhancement
 git rebase main
 ```
+
+What Happens Now?
+
+Git takes:
+
+Commit 1 → tries to replay it on top of main
+
+If conflict occurs:
+
+    - Rebase stops
+    - You must resolve
+    - Then continue
+
+# Step 6: Inspect Conflict
+```bash
+git status
+cat demo/app.js
+```
+Resolve the conflict manually.
+
+Then:
+```bash
+git add demo/app.js
+git rebase --continue
+```
+`Important: It May Conflict Again`
+
+Git now replays Commit 2.
+
+If that commit also conflicts, you must resolve it again.
