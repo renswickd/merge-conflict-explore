@@ -197,6 +197,8 @@ git rebase --abort
 
 This returns branch to original state.
 
+---
+
 # Key Takeaways
 
 - Rebase replays commits one-by-one
@@ -204,3 +206,18 @@ This returns branch to original state.
 - History becomes linear
 - Rebasing shared branches is dangerous
 - Rebasing local feature branches is common
+
+## Professional Insight
+
+Rebase is powerful but should be used carefully.
+
+### Use rebase:
+
+On your own feature branches
+Before creating PR
+To keep history clean
+
+### Avoid rebase:
+
+On shared branches
+On main
