@@ -40,3 +40,30 @@ EOF
 git add demo/payment.js
 git commit -m "Initial payment processing"
 ```
+
+# Step 2: Create Bugfix Branch
+
+Simulate a hotfix branch:
+```bash
+git checkout -b hotfix-tax-rounding
+```
+
+Modify logic:
+
+```bash
+cat <<EOF > demo/payment.js
+function processPayment(amount) {
+  const total = amount * 1.1;
+  return Math.round(total);
+}
+EOF
+
+git add demo/payment.js
+git commit -m "Fix: round total amount"
+```
+
+Remember this commit hash:
+```bash
+git log --oneline
+```
+Copy the commit ID.
