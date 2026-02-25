@@ -1,4 +1,4 @@
 export function processPayment(amount, taxRate) {
   const tax = amount * taxRate;
-  return amount + tax;
+return Math.round(amount + tax);
 }
