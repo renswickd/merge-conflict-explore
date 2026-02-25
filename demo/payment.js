@@ -1,3 +1,4 @@
-function processPayment(amount) {
-  return amount * 1.1;
+export function processPayment(amount, taxRate) {
+  const tax = amount * taxRate;
+  return amount + tax;
 }
