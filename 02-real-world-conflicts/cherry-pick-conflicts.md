@@ -25,3 +25,18 @@ You will:
 5. Understand why context matters
 
 ---
+
+# Step 1: Create Base File
+
+```bash
+git checkout main
+
+cat <<EOF > demo/app.js
+function greet(name) {
+  return "Hello " + name;
+}
+EOF
+
+git add demo/app.js
+git commit -m "Initial greet function"
+```
