@@ -66,7 +66,7 @@ Remember this commit hash:
 ```bash
 git log --oneline
 ```
-Copy the commit ID.
+`Copy the commit ID.`
 
 # Step 3: Meanwhile, main Evolves
 ```bash
@@ -84,4 +84,17 @@ EOF
 
 git add demo/payment.js
 git commit -m "Refactor: use taxRate parameter and ES module"
+```
+
+Now:
+
+hotfix commit is based on old structure
+
+main has refactored function signature
+
+# Step 4: Cherry-Pick the Hotfix Commit
+
+Stay on main:
+```bash
+git cherry-pick <commit-hash> # copied commit hash
 ```
