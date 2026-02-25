@@ -67,3 +67,21 @@ Remember this commit hash:
 git log --oneline
 ```
 Copy the commit ID.
+
+# Step 3: Meanwhile, main Evolves
+```bash
+git checkout main
+```
+Simulate refactor by another developer:
+
+```bash
+cat <<EOF > demo/payment.js
+export function processPayment(amount, taxRate) {
+  const tax = amount * taxRate;
+  return amount + tax;
+}
+EOF
+
+git add demo/payment.js
+git commit -m "Refactor: use taxRate parameter and ES module"
+```
