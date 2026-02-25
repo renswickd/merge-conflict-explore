@@ -31,12 +31,12 @@ You will:
 ```bash
 git checkout main
 
-cat <<EOF > demo/app.js
-function greet(name) {
-  return "Hello " + name;
+cat <<EOF > demo/payment.js
+function processPayment(amount) {
+  return amount * 1.1;
 }
 EOF
 
-git add demo/app.js
-git commit -m "Initial greet function"
+git add demo/payment.js
+git commit -m "Initial payment processing"
 ```
