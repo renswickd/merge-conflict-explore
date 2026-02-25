@@ -98,3 +98,10 @@ Stay on main:
 ```bash
 git cherry-pick <commit-hash> # copied commit hash
 ```
+
+# Step 5: Observe Conflict
+```bash
+git status
+cat demo/payment.js
+```
+You should see conflict markers.
