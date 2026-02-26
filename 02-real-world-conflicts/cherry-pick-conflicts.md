@@ -105,3 +105,24 @@ git status
 cat demo/payment.js
 ```
 You should see conflict markers.
+
+# Why This Conflict Happened
+
+Cherry-pick tries to apply:
+
+`"Add Math.round to return value"`
+
+But, 
+- The structure changed
+- Function signature changed
+- Export added
+- Parameter list changed
+
+Git cannot automatically apply the patch because the surrounding context differs.
+
+Cherry-pick works by matching:
+
+- Exact context lines
+- Exact structure
+
+If context shifts too much , then it's conflict.
