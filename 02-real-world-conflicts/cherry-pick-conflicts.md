@@ -126,3 +126,22 @@ Cherry-pick works by matching:
 - Exact structure
 
 If context shifts too much , then it's conflict.
+
+# Step 6: Resolve and Continue
+
+Edit file manually to combine:
+
+New ES module structure
+- taxRate parameter
+- Rounding logic
+
+Then:
+```bash
+git add demo/payment.js
+git cherry-pick --continue
+```
+`Abort Option`
+If you want to cancel:
+```bash
+git cherry-pick --abort
+```
