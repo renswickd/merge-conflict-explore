@@ -142,6 +142,7 @@ git cherry-pick --continue
 ```
 `Abort Option`
 If you want to cancel:
+
 ```bash
 git cherry-pick --abort
 ```
