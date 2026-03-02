@@ -22,4 +22,10 @@ This section simulates real engineering workflows.
 
 ---
 
-Start with `long-lived-branch/`
+# Compare Cherry-Pick vs Rebase vs Merge
+
+| Operation   | Applies How?              | Conflict Pattern            |
+| ----------- | ------------------------- | --------------------------- |
+| Merge       | Compare 3 branches        | One conflict resolution     |
+| Rebase      | Replay multiple commits   | Conflict per commit         |
+| Cherry-pick | Apply one specific commit | Conflict if context changed |
