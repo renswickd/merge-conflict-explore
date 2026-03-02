@@ -15,10 +15,10 @@ This section simulates real engineering workflows.
 
 | Folder | What You Learn |
 |--------|---------------|
-| long-lived-branch | Why old branches become conflict-heavy |
-| rebasing-conflicts | Why rebase can repeat conflicts |
-| cherry-pick-conflicts | Why applying old commits causes issues |
-| conflict-after-pull | Why `git pull` suddenly explodes |
+| `long-lived-branch/` | Why old branches become conflict-heavy |
+| `rebasing-conflicts/` | Why rebase can repeat conflicts |
+| `cherry-pick-conflicts/` | Why applying old commits causes issues |
+| `conflict-after-pull/` | Why `git pull` suddenly explodes |
 
 ---
 
