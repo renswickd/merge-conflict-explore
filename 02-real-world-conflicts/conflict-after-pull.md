@@ -125,3 +125,33 @@ When pulling, Git tried to merge:
 - Your local commit
 - The new remote commit
 Both changed the same line → conflict.
+
+## Try Rebase Instead (Optional)
+
+Abort current merge:
+```bash
+git merge --abort
+```
+
+Reset:
+```bash
+git reset --hard HEAD~1
+```
+
+Now:
+```bash
+git rebase remote-update
+```
+
+Observe:
+
+- Conflict may appear differently
+- History shape changes
+
+# Key Takeaways
+
+- git pull is fetch + merge (or rebase)
+- Pull conflicts happen when both sides changed same region
+- Being behind remote increases conflict risk
+- Frequent pulls reduce divergence
+- Pulling with rebase changes conflict behavior
