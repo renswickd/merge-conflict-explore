@@ -1,3 +1,3 @@
 const config = {
-  apiUrl: "https://api.dev.local",
+  apiUrl: "https://api.production.com",
 };
