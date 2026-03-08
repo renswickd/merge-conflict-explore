@@ -30,3 +30,43 @@ You will:
 5. Understand what really happened
 
 ---
+
+# Step 1: Create Base File
+
+```bash
+git checkout main
+
+cat <<EOF > demo/config.js
+const config = {
+  apiUrl: "https://api.dev.local",
+};
+EOF
+
+git add demo/config.js
+git commit -m "Initial config"
+```
+
+# Step 2: Simulate Remote Update
+
+We simulate another developer updating main.
+
+```bash
+git checkout -b remote-update
+```
+Modify the file:
+```bash
+cat <<EOF > demo/config.js
+const config = {
+  apiUrl: "https://api.production.com",
+};
+EOF
+
+git add demo/config.js
+git commit -m "Update API URL to production"
+```
+Now simulate pushing to main:
+```bash
+git checkout main
+git merge remote-update
+```
+Main now has the remote change.
