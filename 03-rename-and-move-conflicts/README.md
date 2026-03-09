@@ -31,3 +31,82 @@ Because of this:
 - Conflicts can become confusing
 
 ---
+
+# Why This Matters in Real Projects
+
+Rename and move conflicts commonly happen during:
+
+- Large refactors
+- Directory restructuring
+- Codebase modularization
+- Monorepo reorganizations
+- Framework migrations
+
+Example scenarios:
+
+- Dev A renames `utils.js` → `helpers.js`
+- Dev B edits `utils.js`
+- Merge happens
+- Git must decide:
+  - Was it deleted?
+  - Was it renamed?
+  - Should edits apply to the new name?
+
+This is where structural conflicts emerge.
+
+---
+
+# What You Will Learn in This Chapter
+
+## 1️⃣ File Rename vs Edit
+
+You will simulate:
+
+- Branch A renames a file
+- Branch B edits the same file
+- Merge both
+
+You will observe:
+- How Git detects rename
+- How conflicts appear
+- What happens if similarity threshold changes
+
+---
+
+## 2️⃣ Directory Move Conflicts
+
+You will simulate:
+
+- Moving a file to a new folder
+- Editing it in another branch
+- Merging both
+
+You will observe:
+- How Git applies changes across paths
+- When it succeeds automatically
+- When it fails
+
+---
+
+# Key Mental Model for This Chapter
+
+Line conflicts happen because of overlapping text.
+
+Rename conflicts happen because of:
+
+    `Structure divergence + heuristic detection`
+
+Understanding this makes you much more confident during large refactors.
+
+---
+
+# Before Starting
+
+Ensure:
+- Your working tree is clean
+- You understand three-way merge
+- You are comfortable resolving standard conflicts
+
+Then proceed to:
+
+- `file-rename-vs-edit/`
