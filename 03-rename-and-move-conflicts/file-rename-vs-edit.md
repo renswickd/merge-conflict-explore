@@ -21,3 +21,15 @@ If similarity is high enough, Git assumes it was renamed.
 If not, Git may treat it as delete + add, causing confusing conflicts.
 
 ---
+
+# Goal of This Exercise
+
+You will:
+
+1. Create a file
+2. Rename it in one branch
+3. Edit it in another branch
+4. Merge them
+5. Observe how Git handles rename detection
+
+---
