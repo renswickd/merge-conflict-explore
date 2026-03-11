@@ -33,3 +33,25 @@ You will:
 5. Observe how Git handles rename detection
 
 ---
+
+# Step 1: Create Base File
+
+```bash
+git checkout main
+
+cat <<EOF > demo/utils.js
+function calculate(a, b) {
+  return a + b;
+}
+EOF
+
+git add demo/utils.js
+git commit -m "Add utils.js with calculate function"
+```
+2: Rename File in Branch A
+# Step 
+```bash
+git checkout -b rename-utils
+git mv demo/utils.js demo/helpers.js
+git commit -m "Rename utils.js to helpers.js"
+```
