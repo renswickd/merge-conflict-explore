@@ -55,3 +55,27 @@ git checkout -b rename-utils
 git mv demo/utils.js demo/helpers.js
 git commit -m "Rename utils.js to helpers.js"
 ```
+Important: use `git mv` to make rename explicit in history.
+
+# Step 3: Edit Original File in Branch B
+```bash
+git checkout main
+git checkout -b edit-utils
+```
+Modify the file:
+```bash
+cat <<EOF > demo/utils.js
+function calculate(a, b) {
+  console.log("Calculating...");
+  return a + b;
+}
+EOF
+
+git add demo/utils.js
+git commit -m "Add logging to calculate function"
+```
+Now:
+
+- Branch rename-utils -> file renamed
+- Branch edit-utils -> file edited
+- Both diverged from same base
