@@ -117,3 +117,16 @@ Rename detection is based on:
 - Default similarity threshold (~50%)
 Because content was mostly unchanged, Git recognized it as a rename.
 
+
+# Key Takeaways
+- Git does not track renames directly
+- Rename detection is heuristic
+- Similarity matters
+- Large refactors can break rename detection
+- Renaming while others edit can cause structural conflicts
+
+# Professional Insight
+- During large refactors:
+- Avoid mixing renames + logic changes
+- Commit renames separately
+- Merge frequently
