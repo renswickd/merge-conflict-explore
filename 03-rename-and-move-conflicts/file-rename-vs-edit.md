@@ -79,3 +79,20 @@ Now:
 - Branch rename-utils -> file renamed
 - Branch edit-utils -> file edited
 - Both diverged from same base
+
+
+# Step Visualize Before Merge
+```bash
+git log --oneline --graph --all --decorate
+```
+Pause and predict:
+
+- Will Git treat this as delete + edit?
+- Will it detect rename?
+- Will there be a conflict?
+
+# Step 5: Merge Rename Branch into Edit Branch
+```bash
+git checkout edit-utils
+git merge rename-utils
+```
