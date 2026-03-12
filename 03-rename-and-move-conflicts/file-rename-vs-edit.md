@@ -96,3 +96,24 @@ Pause and predict:
 git checkout edit-utils
 git merge rename-utils
 ```
+
+# What Just Happened?
+
+If rename detection worked:
+
+- Git detected utils.js -> helpers.js
+- It applied the logging change to helpers.js
+- No major conflict occurred
+
+If similarity detection fails (rare here):
+
+- Git may show delete/modify conflict
+
+# Why This Works
+
+Rename detection is based on:
+
+- File similarity
+- Default similarity threshold (~50%)
+Because content was mostly unchanged, Git recognized it as a rename.
+
