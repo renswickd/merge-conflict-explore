@@ -20,3 +20,27 @@ Examples in Python projects:
 Generated files often cause noisy and unnecessary conflicts.
 
 ---
+
+# Critical Insight
+
+If a file can be regenerated,
+it should usually NOT be manually merged.
+
+The correct resolution is often:
+
+    Delete → Regenerate → Commit
+
+---
+
+# Goal of This Exercise
+
+You will:
+
+1. Create a small Python script
+2. Simulate generating build artifacts
+3. Modify artifacts differently in two branches
+4. Merge branches
+5. Observe conflict
+6. Fix properly
+
+---
