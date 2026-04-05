@@ -42,5 +42,3 @@ You will:
 4. Merge branches
 5. Observe conflict
 6. Fix properly
-
----
