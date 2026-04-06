@@ -42,3 +42,34 @@ You will:
 4. Merge branches
 5. Observe conflict
 6. Fix properly
+---
+
+# Step 1: Create Simple Python Script
+
+```bash
+git checkout main
+
+mkdir -p demo/python-app
+cd demo/python-app
+
+cat <<EOF > app.py
+def greet(name):
+    return f"Hello {name}"
+EOF
+
+git add app.py
+git commit -m "Add simple Python app"
+```
+
+# Step 2: Simulate Generated Build File
+
+Simulate a build output directory.
+```bash
+mkdir -p dist
+cat <<EOF > dist/output.txt
+Build version 1
+EOF
+
+git add dist
+git commit -m "Add generated build output"
+```
