@@ -73,3 +73,81 @@ EOF
 git add dist
 git commit -m "Add generated build output"
 ```
+⚠️ Note: This is intentionally bad practice for learning.
+
+# Step 3: Branch A – Regenerate Build
+```bash
+git checkout -b feature-a
+```
+Simulate rebuild:
+```bash
+cat <<EOF > dist/output.txt
+Build version 2 - feature A
+EOF
+
+git add dist/output.txt
+git commit -m "Rebuild output in feature A"
+```
+
+# Step 4: Branch B – Different Regeneration
+```bash
+git checkout main
+git checkout -b feature-b
+
+# Simulate another build:
+cat <<EOF > dist/output.txt
+Build version 2 - feature B
+EOF
+
+git add dist/output.txt
+git commit -m "Rebuild output in feature B"
+```
+
+Now both branches changed generated file differently.
+
+# Step 5: Merge and Observe
+```bash
+git checkout feature-a
+git merge feature-b
+```
+
+# Step 6: Inspect Conflict
+```bash
+git status
+cat dist/output.txt
+```
+
+# Why This Conflict Is Pointless
+
+This file:
+
+- Is not source code
+- Is not manually edited
+- Is tool-generated
+- Can be recreated
+
+Merging it manually is meaningless.
+
+# Correct Resolution Strategy
+```bash
+
+# Abort merge (optional):
+git merge --abort
+
+# Remove generated file from version control:
+git rm -r dist
+
+# Add to .gitignore:
+echo "dist/" >> .gitignore
+git add .gitignore
+git commit -m "Ignore generated build artifacts"
+
+# Re-run build locally when needed.
+```
+
+# Why This Is Better
+- No future conflicts
+- Cleaner repository
+- Smaller diffs
+- Faster CI
+- Less merge noise
